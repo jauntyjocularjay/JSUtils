@@ -12,11 +12,14 @@ class JSUtil {
     }
 
     static LogObject(object, alias=null){
+        let result
         alias
             ? alias = alias
             : alias = typeof object
-        console.log(`${alias} + ${JSUtil.ObjToString(object)}`)
+        result = `${alias} ${JSUtil.ObjToString(object)}`
+        return result
     }
 
 }
 
+export { JSUtil }
